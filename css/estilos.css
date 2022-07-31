@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
+}
+
+caption {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.cabecero {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background: url(fondo.png), #F11712;
+    background: url(fondo.png), -webkit-gradient(linear, right top, left top, from(#F11712), to(#0099F7));
+    background: url(fondo.png), linear-gradient(to left, #F11712, #0099F7)
+}
+.presupuesto {
+    margin: 4%;
+}
+
+.presupuesto_titulo{
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.presupuesto_valor {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 46px;
+    letter-spacing: 2px;
+}
+
+.presupuesto_ingreso,
+.presupuesto_egreso {
+    padding: 12px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 5px 1px #fff;
+}
+
+.presupuesto_ingreso {
+    margin-bottom: 10px;
+    background-color: #0099F7;
+}
+
+.presupuesto_egreso {
+    background-color: #F11712;
+}
+
+.presupuesto_ingreso--texto,
+.presupuesto_egreso--texto { 
+    margin-top: 2px;
+    float: left;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.derecha { float: right; }
+
+.presupuesto_ingreso--valor,
+.presupuesto_egreso--valor {
+    letter-spacing: 1px;
+}
+
+.agregar {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+}
+
+.agregar_contenedor {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 14px;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.agregar_tipo {
+    width: 55px;
+    height: 44px;
+    margin-right: 5px;
+    border: 1px solid #e7e7e7;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.agregar_descripcion,
+.agregar_valor {
+    padding: 12px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid #e7e7e7;
+    font-size: 14px;
+}
+
+.agregar_descripcion { width: 230px;}
+.agregar_valor { width: 100px;}
+
+.agregar_btn {
+    border: none;
+    display: inline-block;
+    color: #0099F7;
+    font-size: 35px;
+    background: none;
+    cursor: pointer;
+}
+
+.contenedor {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ingreso,
+.egreso {
+    width: 370px;
+    margin-top: 50px;
+}
+
+.ingreso_titulo { color: #0099F7; }
+.egreso_titulo { color: #F11712; }
+
+.elemento_descripcion { float: left;}
+
+.elemento_valor {
+    float: left;
+    transition: transform 0.3s;
+}
+
+.limpiarEstilos::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.elemento_eliminar { float: left; }
+
+.elemento_eliminar--btn {
+    border: none;
+    display: none;
+    vertical-align: middle;
+    font-size: 22px;
+    line-height: 1;
+    background: none;
+    cursor: pointer;
+}
+
+.elemento_descripcion,
+.elemento .derecha{
+    padding: 10px;
+}
+
+.agregar_btn:active { transform: translateY(2px); }
+
+.agregar_tipo:focus,
+.agregar_descripcion:focus,
+.agregar_valor:focus {
+    outline: none;
+    border: 1px solid #0099F7;
+}
+
+.elemento:first-child { border-top: 1px solid #e7e7e7; }
+.elemento:nth-child(even) { background-color: #f7f7f7; }
+
+.ingreso .elemento_valor,
+.ingreso .elemento_eliminar--btn {
+    color: #0099F7;
+}
+
+.egreso .elemento_valor,
+.egreso .elemento_eliminar--btn {
+    color: #F11712;
+}
+
+.elemento_eliminar--btn:active { transform: translateY(2px); }
+
+.elemento:hover .elemento_eliminar--btn { display: block; }
+.elemento:hover .elemento_valor { transform: translateX(-20px); }
+.elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
